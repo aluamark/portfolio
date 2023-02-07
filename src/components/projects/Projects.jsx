@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeader from "../SectionHeader";
 import ScrollDown from "../ScrollDown";
 import iskotrack from "../../assets/iskotrack.png";
+import smashflix from "../../assets/smashflix.png";
 import portfolio from "../../assets/portfoliosite.png";
 import ams from "../../assets/ams.png";
 import Project from "./Project";
@@ -19,6 +20,18 @@ const Projects = () => {
 			github: "",
 			site: "",
 			skills: ["VB.NET", "SQL"],
+		},
+		{
+			title: "SmashFlix",
+			description:
+				"SmashFlix is a website where you can watch animes or movies online.",
+			image: smashflix,
+			note: false,
+			noteDetails: "",
+			links: true,
+			github: "https://github.com/aluamark/smashflix",
+			site: "https://smashflix.vercel.app/",
+			skills: ["React", "TailwindCSS"],
 		},
 		{
 			title: "My Portfolio",
