@@ -50,12 +50,12 @@ const Project = ({ project }) => {
 					</div>
 				)}
 
-				<div className="flex">
+				<div className="flex flex-wrap gap-1">
 					{project.skills.map((skill) => {
 						return (
 							<p
 								key={skill}
-								className="flex items-center py-1 px-3 mr-1 bg-green-500 font-bold text-sm rounded"
+								className="flex py-1 px-3 bg-green-500 font-bold text-xs rounded"
 							>
 								{skill}
 							</p>
