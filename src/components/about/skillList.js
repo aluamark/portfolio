@@ -17,6 +17,7 @@ import github from "../../assets/Github.svg";
 import postman from "../../assets/Postman.svg";
 import heroku from "../../assets/Heroku.svg";
 import vercel from "../../assets/Vercel.svg";
+import nextjs from "../../assets/Next.svg";
 
 export const devLangs = [
 	{
@@ -47,6 +48,11 @@ export const devLangs = [
 ];
 
 export const libraries = [
+	{
+		id: 0,
+		svg: nextjs,
+		skill: "Next",
+	},
 	{
 		id: 1,
 		svg: react,

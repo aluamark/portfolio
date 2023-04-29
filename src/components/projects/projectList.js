@@ -2,6 +2,7 @@ import iskotrack from "../../assets/iskotrack.png";
 import smashflix from "../../assets/smashflix.png";
 import smashbook from "../../assets/smashbook.png";
 import portfolio from "../../assets/portfoliosite.png";
+import panahon from "../../assets/panahon.png";
 import ams from "../../assets/ams.png";
 
 export const projects = [
@@ -27,6 +28,17 @@ export const projects = [
 		github: "https://github.com/aluamark/smashbook",
 		site: "https://smashbook.vercel.app/",
 		skills: ["React", "Redux", "TailwindCSS", "Node", "Express", "NoSQL"],
+	},
+	{
+		title: "Panahon",
+		description: "Weather application built using Next.JS",
+		image: panahon,
+		note: false,
+		noteDetails: "",
+		links: true,
+		github: "https://github.com/aluamark/panahon",
+		site: "https://panahon.vercel.app/",
+		skills: ["NextJS", "TailwindCSS"],
 	},
 	{
 		title: "SmashFlix",
