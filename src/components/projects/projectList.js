@@ -40,18 +40,18 @@ export const projects = [
 		site: "https://panahon.vercel.app/",
 		skills: ["NextJS", "TailwindCSS"],
 	},
-	{
-		title: "SmashFlix",
-		description:
-			"SmashFlix is a website where you can watch animes or movies online.",
-		image: smashflix,
-		note: false,
-		noteDetails: "",
-		links: true,
-		github: "https://github.com/aluamark/smashflix",
-		site: "https://smashflix.vercel.app/",
-		skills: ["React", "TailwindCSS"],
-	},
+	// {
+	// 	title: "SmashFlix",
+	// 	description:
+	// 		"SmashFlix is a website where you can watch animes or movies online.",
+	// 	image: smashflix,
+	// 	note: false,
+	// 	noteDetails: "",
+	// 	links: true,
+	// 	github: "https://github.com/aluamark/smashflix",
+	// 	site: "https://smashflix.vercel.app/",
+	// 	skills: ["React", "TailwindCSS"],
+	// },
 	{
 		title: "My Portfolio",
 		description: "A website where I can showcase my skills and projects.",
@@ -63,17 +63,17 @@ export const projects = [
 		site: "https://aluamark.vercel.app/",
 		skills: ["React", "TailwindCSS"],
 	},
-	{
-		title: "Iskotrack",
-		description:
-			"Iskotrack is one of my personal projects. It is a webapp used to track the player's daily earnings and elo ranking in a Web3 game called Axie Infinity. It is built around Axie Infinity's API.",
-		image: iskotrack,
-		note: false,
-		noteDetails:
-			"The website is still up but not working as it should anymore due to Axie Infinity's API changes.",
-		links: true,
-		github: "https://github.com/aluamark/iskotrack",
-		site: "https://iskotrack.vercel.app",
-		skills: ["React", "Redux", "Node", "Express", "NoSQL"],
-	},
+	// {
+	// 	title: "Iskotrack",
+	// 	description:
+	// 		"Iskotrack is one of my personal projects. It is a webapp used to track the player's daily earnings and elo ranking in a Web3 game called Axie Infinity. It is built around Axie Infinity's API.",
+	// 	image: iskotrack,
+	// 	note: false,
+	// 	noteDetails:
+	// 		"The website is still up but not working as it should anymore due to Axie Infinity's API changes.",
+	// 	links: true,
+	// 	github: "https://github.com/aluamark/iskotrack",
+	// 	site: "https://iskotrack.vercel.app",
+	// 	skills: ["React", "Redux", "Node", "Express", "NoSQL"],
+	// },
 ];
