@@ -10,7 +10,7 @@ const Resume = () => {
 				<div className="flex mx-auto pt-8 pb-5 ">
 					<a
 						className="flex items-center bg-green-500 hover:bg-green-300 duration-300 px-5 py-3 rounded shadow-xl"
-						href="https://drive.google.com/file/d/1ITVDJKye-udRW7LVDh6VvgA45sOaG_60/view?usp=share_link"
+						href="https://drive.google.com/file/d/1Il31Hros4b8K23z8Pz66bhmghIvBDLhb/view?usp=share_link"
 						target="blank"
 					>
 						<p className="font-bold text-sm sm:text-md">
