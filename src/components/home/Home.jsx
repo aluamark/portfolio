@@ -48,7 +48,8 @@ const Home = () => {
 								Hello
 							</button>
 							<h2 className="typewriter flex font-bold text-neutral-300 pl-3">
-								I am Mark!&nbsp;👋<span className="z-0"></span>
+								I am Mark!&nbsp;👋
+								{/* <span className="z-0"></span> */}
 							</h2>
 						</div>
 						<span className="text-4xl text-stone-500">&lt;&gt;</span>
