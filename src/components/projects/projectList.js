@@ -1,6 +1,6 @@
-import iskotrack from "../../assets/iskotrack.png";
-import smashflix from "../../assets/smashflix.png";
-import smashbook from "../../assets/smashbook.png";
+// import iskotrack from "../../assets/iskotrack.png";
+// import smashflix from "../../assets/smashflix.png";
+import sociable from "../../assets/sociable.png";
 import portfolio from "../../assets/portfoliosite.png";
 import panahon from "../../assets/panahon.png";
 import ams from "../../assets/ams.png";
@@ -19,14 +19,14 @@ export const projects = [
 		skills: ["VB.NET", "SQL"],
 	},
 	{
-		title: "Smashbook",
-		description: "Smashbook is a social media app like facebook.",
-		image: smashbook,
-		note: false,
-		noteDetails: "",
+		title: "Sociable",
+		description: "Sociable is a social media app like facebook.",
+		image: sociable,
+		note: true,
+		noteDetails: "The forget password feature is still in development",
 		links: true,
-		github: "https://github.com/aluamark/smashbook",
-		site: "https://smashbook.vercel.app/",
+		github: "https://github.com/aluamark/sociable",
+		site: "https://sociable-phi.vercel.app/",
 		skills: ["React", "Redux", "TailwindCSS", "Node", "Express", "NoSQL"],
 	},
 	{
