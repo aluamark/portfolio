@@ -7,11 +7,11 @@ import mysql from "../../assets/MySQL.svg";
 import mongodb from "../../assets/MongoDB.svg";
 import firebase from "../../assets/Firebase.svg";
 import react from "../../assets/React.svg";
+import reactquery from "../../assets/React-Query.png";
 import redux from "../../assets/Redux.svg";
 import node from "../../assets/Node.svg";
 import express from "../../assets/Express.svg";
 import tailwindcss from "../../assets/TailwindCSS.svg";
-import bootstrap from "../../assets/Bootstrap.svg";
 import git from "../../assets/Git.svg";
 import github from "../../assets/Github.svg";
 import postman from "../../assets/Postman.svg";
@@ -60,28 +60,28 @@ export const libraries = [
 	},
 	{
 		id: 2,
+		svg: reactquery,
+		skill: "React-Query",
+	},
+	{
+		id: 3,
 		svg: redux,
 		skill: "Redux",
 	},
 	{
-		id: 3,
+		id: 4,
 		svg: node,
 		skill: "Node",
 	},
 	{
-		id: 4,
+		id: 5,
 		svg: express,
 		skill: "Express",
 	},
 	{
-		id: 5,
+		id: 6,
 		svg: tailwindcss,
 		skill: "Tailwind",
-	},
-	{
-		id: 6,
-		svg: bootstrap,
-		skill: "Bootstrap",
 	},
 ];
 

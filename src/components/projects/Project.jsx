@@ -2,6 +2,14 @@ import React from "react";
 import texture from "../../assets/texture.jpg";
 
 const Project = ({ project }) => {
+	const formattedDescription = project.description
+		.split("\n")
+		.map((line, index) => (
+			<React.Fragment key={index}>
+				&bull; {line}
+				<br />
+			</React.Fragment>
+		));
 	return (
 		<div className="flex flex-col md:flex-row bg-neutral-300 text-zinc-800 my-3 rounded-xl">
 			<div
@@ -18,12 +26,12 @@ const Project = ({ project }) => {
 			<div className="md:w-3/5 text-left p-5">
 				<h3 className="text-xl font-bold">{project.title}</h3>
 
-				<p className="py-3">{project.description}</p>
+				<p className="py-3 text-xs">{formattedDescription}</p>
 
 				{project.note && (
-					<div className="pb-3">
-						<i className="text-xs">**Note</i>
-						<p className="text-sm">{project.noteDetails}</p>
+					<div className="pb-3 text-xs">
+						<i className="font-semibold">**Note</i>
+						<p>{project.noteDetails}</p>
 					</div>
 				)}
 

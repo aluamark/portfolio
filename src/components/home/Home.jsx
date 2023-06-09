@@ -67,7 +67,7 @@ const Home = () => {
 						<img
 							src={dpFlipped}
 							alt="self-portrait"
-							className="rounded-full mx-auto w-1/2 lg:w-3/4 shadow-lg shadow-green-800/50 hover:rotate-12 duration-300 max-w-lg"
+							className="rounded-full mx-auto w-1/2 lg:w-3/4 shadow-lg shadow-green-800/50 max-w-lg"
 						/>
 					</div>
 				</div>
