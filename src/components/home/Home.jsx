@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 
+const Link = ({ title, link }) => {
+	return (
+		<div className="flex flex-col lg:flex-row justify-between md:w-1/2 md:px-5">
+			<span className="text-white font-semibold">{title}:</span>
+			<a href={link} className="hover:underline truncate">
+				https://aluamark.vercel.app/
+				<span className="text-white font-semibold">{link}</span>
+			</a>
+		</div>
+	);
+};
+
 const Home = ({ run, setRun }) => {
 	const [execute, setExecute] = useState(false);
 	const [showCompile, setShowCompile] = useState(false);
@@ -102,41 +114,11 @@ const Home = ({ run, setRun }) => {
 								the browser.
 							</p>
 							<div className="flex flex-col">
-								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
-									<span className="text-white font-semibold">Welcome:</span>{" "}
-									<a href="#welcome" className="hover:underline truncate">
-										https://aluamark.vercel.app/
-										<span className="text-white font-semibold">#welcome</span>
-									</a>
-								</div>
-								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
-									<span className="text-white font-semibold">About:</span>{" "}
-									<a href="#about" className="hover:underline truncate">
-										https://aluamark.vercel.app/
-										<span className="text-white font-semibold">#about</span>
-									</a>
-								</div>
-								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
-									<span className="text-white font-semibold">Projects:</span>{" "}
-									<a href="#projects" className="hover:underline truncate">
-										https://aluamark.vercel.app/
-										<span className="text-white font-semibold">#projects</span>
-									</a>
-								</div>
-								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
-									<span className="text-white font-semibold">Contact:</span>{" "}
-									<a href="#contact" className="hover:underline truncate">
-										https://aluamark.vercel.app/
-										<span className="text-white font-semibold">#contact</span>
-									</a>
-								</div>
-								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
-									<span className="text-white font-semibold">Resume:</span>{" "}
-									<a href="#resume" className="hover:underline truncate">
-										https://aluamark.vercel.app/
-										<span className="text-white font-semibold">#resume</span>
-									</a>
-								</div>
+								<Link title="Welcome" link="#welcome" />
+								<Link title="About" link="#about" />
+								<Link title="Projects" link="#projects" />
+								<Link title="Contact" link="#contact" />
+								<Link title="Resume" link="#resume" />
 							</div>
 							<p className="md:w-1/2">
 								Note that the development build is not optimized. To create a
