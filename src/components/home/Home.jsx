@@ -26,7 +26,7 @@ const Home = ({ run, setRun }) => {
 	return (
 		<div
 			id="home"
-			className="min-h-screen flex flex-col items-center py-5 bg-black text-neutral-300"
+			className="min-h-screen flex flex-col justify-between items-center py-5 bg-black text-neutral-300"
 		>
 			<div className="max-w-screen-lg w-full flex flex-col gap-5 px-5">
 				<div className="flex justify-between pb-3 text-xs">
@@ -164,7 +164,7 @@ const Home = ({ run, setRun }) => {
 				</div>
 			</div>
 			{run && (
-				<div className="mx-auto mt-5">
+				<div className="mx-auto my-5">
 					<a href="#welcome">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

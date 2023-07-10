@@ -7,7 +7,7 @@ const Welcome = ({ welcomeRef }) => {
 		<div
 			id="welcome"
 			ref={welcomeRef}
-			className="relative min-h-screen flex flex-col justify-center items-center bg-zinc-900 text-neutral-300 md:px-5 py-20 overflow-x-hidden"
+			className="relative min-h-screen flex justify-center items-center bg-zinc-900 text-neutral-300 md:px-5 py-20 overflow-x-hidden"
 		>
 			<div className="absolute flex flex-wrap opacity-10">
 				<PuffLoader color="#36d7b7" speedMultiplier={0.5} size={850} />
@@ -38,7 +38,7 @@ const Welcome = ({ welcomeRef }) => {
 					/>
 				</div>
 			</div>
-			<div className="mx-auto mt-5">
+			<div className="absolute bottom-0 py-10">
 				<a href="#about">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
