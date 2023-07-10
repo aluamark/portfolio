@@ -64,7 +64,7 @@ const Contact = () => {
 	return (
 		<div id="contact" className="bg-neutral-300 pt-24 md:px-5">
 			<div className="bg-zinc-800 p-4 mx-4 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl">
-				<SectionHeader title="CONTACT" />
+				<SectionHeader title="Contact.jsx" />
 
 				<div className="text-md text-center pb-5 pt-8">
 					<div className="text-neutral-300">

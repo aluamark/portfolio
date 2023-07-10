@@ -1,78 +1,171 @@
-import React from "react";
-import { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
 import "./Home.css";
-import dpFlipped from "../../assets/dp-flipped.png";
 
-const Home = () => {
-	const fullText = "I develop websites and webapps!";
-	const [text, setText] = useState("");
-	const [index, setIndex] = useState(0);
-
-	const typeDescription = () => {
-		setText("");
-		setIndex(0);
-		if (text !== fullText) {
-			setTimeout(() => {
-				setText(text + fullText[index]);
-				setIndex(index + 1);
-			}, 50);
-		}
-	};
+const Home = ({ run, setRun }) => {
+	const [execute, setExecute] = useState(false);
+	const [showCompile, setShowCompile] = useState(false);
+	const [showView, setShowView] = useState(false);
 
 	useEffect(() => {
-		if (text !== fullText) {
+		if (execute) {
 			setTimeout(() => {
-				setText(text + fullText[index]);
-				setIndex(index + 1);
-			}, 50);
+				setShowCompile(true);
+			}, 1000);
 		}
-	}, [text, index]);
+	}, [execute]);
+
+	useEffect(() => {
+		if (showCompile) {
+			setTimeout(() => {
+				setShowView(true);
+				setRun(true);
+			}, 3000);
+		}
+	}, [showCompile]);
 
 	return (
-		<div id="home" className="h-screen w-full bg-zinc-900">
-			<div
-				className="flex flex-col justify-center h-full max-w-screen-lg mx-auto px-4"
-				data-aos="zoom-in"
-			>
-				<div className="nm-flat-zinc-900-lg flex flex-col items-center rounded-3xl lg:flex-row py-10 mt-10 px-10">
-					<div
-						className="flex flex-col text-center lg:text-left w-3/4 lg:pl-10 mx-auto"
-						data-aos="fade-right"
-					>
-						<div className="flex justify-center text-md md:text-xl pb-5 lg:justify-start">
-							<button
-								onClick={typeDescription}
-								className="rounded w-20 bg-green-500 text-center hover:scale-110 duration-100"
-							>
-								Hello
-							</button>
-							<h2 className="typewriter flex font-bold text-neutral-300 pl-3">
-								I am Mark!&nbsp;👋
-								{/* <span className="z-0"></span> */}
-							</h2>
-						</div>
-						<span className="text-4xl text-stone-500">&lt;&gt;</span>
-						<h2 className="lg:pl-14 text-4xl sm:text-6xl font-bold text-white">
-							{text}
-						</h2>
-
-						<span className="text-4xl text-stone-500 pt-3">&lt;/&gt;</span>
-						<p className="text-green-500 italic pt-5 sm:pb-10 lg:pb-0">
-							Software / Web Developer
-						</p>
-					</div>
-
-					<div className="pt-10 sm:pt-0 lg:py-20">
-						<img
-							src={dpFlipped}
-							alt="self-portrait"
-							className="rounded-full mx-auto w-1/2 lg:w-3/4 shadow-lg shadow-green-800/50 max-w-lg"
-						/>
+		<div
+			id="home"
+			className="min-h-screen flex flex-col items-center py-5 bg-black text-neutral-300"
+		>
+			<div className="max-w-screen-lg w-full flex flex-col gap-5 px-5">
+				<div className="flex justify-between pb-3 text-xs">
+					<span className="border-b pb-1 text-white">TERMINAL</span>
+					<div className="flex items-center gap-1">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="1.5"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							className="lucide lucide-chevron-right-square"
+						>
+							<rect width="18" height="18" x="3" y="3" rx="2" />
+							<path d="m10 8 4 4-4 4" />
+						</svg>
+						<span>{execute ? "node" : "powershell"}</span>
 					</div>
 				</div>
+				<div className="flex flex-col gap-5 text-sm">
+					<div className="flex flex-col">
+						<span>Windows PowerShell</span>
+						<span>
+							Copyright (C) Microsoft Corporation. All rights reserved.
+						</span>
+					</div>
+					<p>
+						Try the new cross-platform PowerShell{" "}
+						<a
+							href="https://aka.ms/pscore6"
+							target="blank"
+							rel="noreferrer"
+							className="hover:underline"
+						>
+							https://aka.ms/pscore6
+						</a>
+					</p>
+					<div className="flex items-center">
+						<div className="flex flex-wrap gap-2">
+							<span>PS C:\Users\aluam\portfolio&gt;</span>
+							<span className="text-yellow-300 ">npm</span>
+							<div className="flex">
+								start
+								<span
+									className={`${execute ? "hidden" : "typewriter z-0"}`}
+								></span>
+							</div>
+						</div>
+					</div>
+					{execute && (
+						<div className="flex flex-col">
+							<span>&gt; portfolio@0.1.0 start</span>
+							<span>&gt; react-scripts start</span>
+						</div>
+					)}
+
+					{showCompile && (
+						<span className="text-blue-400">
+							Starting the development server...
+						</span>
+					)}
+
+					{showView && (
+						<>
+							<span className="text-green-400">Compiled successfully!</span>
+							<p>
+								You can now view my{" "}
+								<span className="text-white font-semibold">portfolio</span> in
+								the browser.
+							</p>
+							<div className="flex flex-col">
+								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
+									<span className="text-white font-semibold">Welcome:</span>{" "}
+									<a href="#welcome" className="hover:underline truncate">
+										https://aluamark.vercel.app/
+										<span className="text-white font-semibold">#welcome</span>
+									</a>
+								</div>
+								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
+									<span className="text-white font-semibold">About:</span>{" "}
+									<a href="#about" className="hover:underline truncate">
+										https://aluamark.vercel.app/
+										<span className="text-white font-semibold">#about</span>
+									</a>
+								</div>
+								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
+									<span className="text-white font-semibold">Projects:</span>{" "}
+									<a href="#projects" className="hover:underline truncate">
+										https://aluamark.vercel.app/
+										<span className="text-white font-semibold">#projects</span>
+									</a>
+								</div>
+								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
+									<span className="text-white font-semibold">Contact:</span>{" "}
+									<a href="#contact" className="hover:underline truncate">
+										https://aluamark.vercel.app/
+										<span className="text-white font-semibold">#contact</span>
+									</a>
+								</div>
+								<div className="flex flex-wrap justify-between md:w-1/2 md:px-5">
+									<span className="text-white font-semibold">Resume:</span>{" "}
+									<a href="#resume" className="hover:underline truncate">
+										https://aluamark.vercel.app/
+										<span className="text-white font-semibold">#resume</span>
+									</a>
+								</div>
+							</div>
+							<p className="md:w-1/2">
+								Note that the development build is not optimized. To create a
+								production build, use{" "}
+								<span className="text-blue-400">npm run build</span>.
+							</p>
+							<p>
+								webpack compiled{" "}
+								<span className="text-green-300">successfully</span>
+							</p>
+						</>
+					)}
+				</div>
+				<div className="flex justify-end w-full pt-5">
+					<button
+						onClick={() => setExecute(true)}
+						className={`${
+							execute
+								? "hidden"
+								: "border border-green-500 hover:bg-green-800 px-10 p-1"
+						}`}
+					>
+						Start Application
+					</button>
+				</div>
+			</div>
+			{run && (
 				<div className="mx-auto mt-5">
-					<a href="#about">
+					<a href="#welcome">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 448 512"
@@ -82,7 +175,7 @@ const Home = () => {
 						</svg>
 					</a>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };

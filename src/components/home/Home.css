@@ -1,14 +1,9 @@
-.typewriter span::after {
+.typewriter {
     content: "";
     width: 5px;
-    height: 24px;
+    height: 20px;
     background: gray;
-    animation: cursor-blink 1.5s steps(2) infinite;
-}
-
-.typewriter span {
-    display: flex;
-    align-items: flex-end;
+    animation: cursor-blink 1s steps(1) infinite;
 }
 
 @keyframes cursor-blink {

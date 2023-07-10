@@ -5,12 +5,12 @@ const Resume = () => {
 	return (
 		<div id="resume" className="bg-neutral-300 py-24 md:px-5">
 			<div className="flex flex-col bg-zinc-800 p-4 mx-4 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl">
-				<SectionHeader title="RESUME" />
+				<SectionHeader title="Resume.jsx" />
 
 				<div className="flex mx-auto pt-8 pb-5 ">
 					<a
 						className="flex items-center bg-green-500 hover:bg-green-300 duration-300 px-5 py-3 rounded shadow-xl"
-						href="https://drive.google.com/file/d/1gHXPa-7fRadlfpaApepQ5QBdwqKn7RPZ/view"
+						href="https://drive.google.com/file/d/1TUGBKIBE6sGY0gj6pD8hXuctHAL-6wr2/view?usp=sharing"
 						target="blank"
 					>
 						<p className="font-bold text-sm sm:text-md">
