@@ -5,7 +5,7 @@ const Link = ({ title, link }) => {
 	return (
 		<div className="flex flex-col lg:flex-row justify-between md:w-1/2 md:px-5">
 			<span className="text-white font-semibold">{title}:</span>
-			<a href={link} className="hover:underline truncate">
+			<a href={link} className="hover:underline truncate" aria-label={title}>
 				https://aluamark.vercel.app/
 				<span className="text-white font-semibold">{link}</span>
 			</a>
@@ -76,6 +76,7 @@ const Home = ({ run, setRun }) => {
 							target="blank"
 							rel="noreferrer"
 							className="hover:underline"
+							aria-label="powershell"
 						>
 							https://aka.ms/pscore6
 						</a>
@@ -147,7 +148,7 @@ const Home = ({ run, setRun }) => {
 			</div>
 			{run && (
 				<div className="mx-auto my-5">
-					<a href="#welcome">
+					<a href="#welcome" aria-label="welcome">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 448 512"

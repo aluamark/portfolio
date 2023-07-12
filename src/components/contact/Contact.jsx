@@ -62,7 +62,7 @@ const Contact = () => {
 	} = useForm();
 
 	return (
-		<div id="contact" className="bg-neutral-300 pt-24 md:px-5">
+		<div id="contact" className="pt-24 md:px-5">
 			<div className="bg-zinc-800 p-4 mx-4 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl">
 				<SectionHeader title="Contact.jsx" />
 

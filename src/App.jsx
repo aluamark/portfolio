@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/nav/Navbar";
+import Sidebar from "./components/nav/Sidebar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
@@ -24,7 +25,7 @@ const App = () => {
 	}, [run]);
 
 	return (
-		<div className="relative font-mono select-none">
+		<div className="font-mono select-none">
 			<ScrollToTop
 				top={250}
 				component={
@@ -42,15 +43,19 @@ const App = () => {
 			/>
 			<Home run={run} setRun={setRun} />
 			{run && (
-				<>
+				<div className="bg-zinc-900">
 					<Navbar />
-					<Welcome welcomeRef={welcomeRef} />
-					<About />
-					<Projects />
-					<Contact />
-					<Resume />
-					<Footer />
-				</>
+					<Sidebar>
+						<div className="flex flex-col w-full">
+							<Welcome welcomeRef={welcomeRef} />
+							<About />
+							<Projects />
+							<Contact />
+							<Resume />
+							<Footer />
+						</div>
+					</Sidebar>
+				</div>
 			)}
 		</div>
 	);

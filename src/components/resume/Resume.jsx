@@ -3,7 +3,7 @@ import SectionHeader from "../SectionHeader";
 
 const Resume = () => {
 	return (
-		<div id="resume" className="bg-neutral-300 py-24 md:px-5">
+		<div id="resume" className="py-24 md:px-5">
 			<div className="flex flex-col bg-zinc-800 p-4 mx-4 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl">
 				<SectionHeader title="Resume.jsx" />
 

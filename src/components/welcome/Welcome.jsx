@@ -9,14 +9,14 @@ const Welcome = ({ welcomeRef }) => {
 			ref={welcomeRef}
 			className="relative min-h-screen flex justify-center items-center bg-zinc-900 text-neutral-300 md:px-5 py-20 overflow-x-hidden"
 		>
-			<div className="absolute flex flex-wrap opacity-10">
+			<div className="absolute flex flex-wrap opacity-10 z-0">
 				<PuffLoader color="#36d7b7" speedMultiplier={0.5} size={850} />
 			</div>
 			<div
-				className="flex flex-col-reverse md:flex-row items-center max-w-screen-lg mx-auto gap-10 md:px-10"
+				className="flex flex-col-reverse md:flex-row items-center max-w-screen-lg mx-auto gap-10 md:px-10 z-30"
 				data-aos="zoom-in"
 			>
-				<div className="flex flex-col gap-20 text-center md:text-left px-5 md:px-0">
+				<div className="flex flex-col gap-10 text-center md:text-left px-5 md:px-0">
 					<div className="flex flex-col gap-5">
 						<h2 className="text-3xl">Nice to meet you!</h2>
 						<h1 className="text-6xl leading-tight">
@@ -25,7 +25,7 @@ const Welcome = ({ welcomeRef }) => {
 						</h1>
 					</div>
 
-					<p className="px-10 md:px-0 w-full lg:w-1/2">
+					<p className="px-10 md:px-0 w-full lg:w- xl:w-1/2">
 						Based in the PH, I'm a front-end developer passionate about building
 						accessible web apps that users love.
 					</p>
@@ -34,12 +34,12 @@ const Welcome = ({ welcomeRef }) => {
 					<img
 						src={wholeBNW}
 						alt="Mark Alua"
-						className="w-[200px] md:w-[300px]"
+						className="w-[200px] md:w-[300px] lg:w-[250px]"
 					/>
 				</div>
 			</div>
 			<div className="absolute bottom-0 py-10">
-				<a href="#about">
+				<a href="#about" aria-label="about">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 448 512"

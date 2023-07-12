@@ -18,7 +18,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav ref={menuRef} className="sticky top-0 z-50">
+		<nav ref={menuRef} className="lg:hidden sticky top-0 z-40">
 			<div className="absolute inset-x-0 top-0 bg-zinc-900 text-green-500 text-md hover:text-neutral-300 shadow-lg">
 				<div className="max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between md:items-center md:flex w-full">
 					<div className="flex justify-between w-full">
@@ -28,7 +28,7 @@ const Navbar = () => {
 						>
 							_<span className="text-neutral-300">alua</span>mark
 						</a>
-						<ul
+						<div
 							className="flex md:hidden items-center py-5 px-5 hover:bg-zinc-800 cursor-pointer"
 							onClick={() => setNavbar(!navbar)}
 						>
@@ -51,19 +51,19 @@ const Navbar = () => {
 									</svg>
 								)}
 							</button>
-						</ul>
+						</div>
 					</div>
 					<div
 						className={`bg-neutral-700 md:bg-zinc-900 md:block ${
 							navbar ? "block" : "hidden"
 						}`}
 					>
-						<ul className="md:flex justify-around divide-x divide-zinc-800/50">
+						<div className="md:flex justify-around divide-x divide-zinc-800/50">
 							<NavLink navbar={navbar} setNavbar={setNavbar} title="about" />
 							<NavLink navbar={navbar} setNavbar={setNavbar} title="projects" />
 							<NavLink navbar={navbar} setNavbar={setNavbar} title="contact" />
 							<NavLink navbar={navbar} setNavbar={setNavbar} title="resume" />
-						</ul>
+						</div>
 					</div>
 				</div>
 			</div>
