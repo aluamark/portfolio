@@ -3,9 +3,9 @@ import OpenSidebarLink from "./OpenSidebarLink";
 import CloseSidebarLink from "./CloseSidebarLink";
 import SidebarDropdown from "./SidebarDropdown";
 import SidebarFile from "./SidebarFile";
-import react from "../../assets/React.svg";
-import javascript from "../../assets/JavaScript.svg";
-import git from "../../assets/Git.svg";
+import react from "../../assets/skills/React.svg";
+import javascript from "../../assets/skills/JavaScript.svg";
+import git from "../../assets/skills/Git.svg";
 
 const Json = () => {
 	return (
@@ -64,9 +64,9 @@ const Sidebar = ({ children }) => {
 			</div>
 
 			{isOpen && (
-				<div className="sticky top-0 hidden lg:flex flex-none h-full w-[250px] z-50 text-neutral-300 bg-zinc-800">
+				<div className="sticky top-0 hidden lg:flex flex-none h-full w-[200px] z-50 text-neutral-300 bg-zinc-800">
 					<div className="h-screen w-full text-sm">
-						<div className="flex justify-between items-center px-5 py-2.5">
+						<div className="flex justify-between items-center pl-5 pr-2.5 py-2.5">
 							<span className="text-neutral-300 text-xs">EXPLORER</span>
 							<div
 								onClick={handleSidebar}

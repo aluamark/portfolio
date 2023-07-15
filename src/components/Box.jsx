@@ -9,12 +9,12 @@ const Box = ({ id, title, linkTo, children }) => {
 			className="relative min-h-screen flex justify-center items-center md:px-5 py-20"
 		>
 			<div
-				className="w-full bg-zinc-800 p-4 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl"
+				className="w-full bg-zinc-800 p-5 md:mx-auto max-w-screen-lg rounded-t-lg relative shadow-xl"
 				data-aos="fade-up"
 			>
 				<SectionHeader title={title} />
 
-				<div className="text-neutral-300 text-center pt-8 pb-5">{children}</div>
+				<div className="text-neutral-300 text-center">{children}</div>
 			</div>
 			{id !== "resume" && <ScrollDown linkTo={linkTo} />}
 		</div>

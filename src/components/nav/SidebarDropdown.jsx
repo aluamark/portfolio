@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import react from "../../assets/React.svg";
+import react from "../../assets/skills/React.svg";
 
 const SidebarDropdown = ({ title, componentTitle, link }) => {
 	const [isOpen, setIsOpen] = useState(true);

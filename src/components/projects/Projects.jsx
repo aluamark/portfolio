@@ -6,9 +6,11 @@ import { projects } from "./projectList";
 const Projects = () => {
 	return (
 		<Box id="projects" title="Projects" linkTo="#contact">
-			{projects.map((project) => {
-				return <Project key={project.title} project={project} />;
-			})}
+			<div className="flex flex-col">
+				{projects.map((project) => {
+					return <Project key={project.title} project={project} />;
+				})}
+			</div>
 		</Box>
 	);
 };

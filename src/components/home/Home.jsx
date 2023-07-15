@@ -139,10 +139,23 @@ const Home = ({ run, setRun }) => {
 						className={`${
 							execute
 								? "hidden"
-								: "border border-green-500 hover:bg-green-800 px-10 p-1"
+								: "flex items-center gap-3 border border-green-500 hover:bg-green-800 px-10 p-1"
 						}`}
 					>
-						Start Application
+						Run Command
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							className="w-4 h-4"
+						>
+							<polyline points="9 10 4 15 9 20" />
+							<path d="M20 4v7a4 4 0 0 1-4 4H4" />
+						</svg>
 					</button>
 				</div>
 			</div>
