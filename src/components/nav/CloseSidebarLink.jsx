@@ -12,7 +12,7 @@ const CloseSidebarLink = ({ title, fontStyle }) => {
 				stroke="currentColor"
 				strokeWidth="1"
 			>
-				<path d="m6 9 6 6 6-6" />
+				<path d="m9 18 6-6-6-6" />
 			</svg>
 			<span className={`${fontStyle}`}>{title}</span>
 		</div>

@@ -18,8 +18,8 @@ const Project = ({ project }) => {
 			>
 				<img
 					src={project.image}
-					alt="iskotrack"
-					className="hover:scale-110 duration-300"
+					alt={project.title}
+					className="hover:scale-105 duration-300"
 				/>
 			</div>
 

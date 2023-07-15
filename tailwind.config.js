@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const neumorphism = require("tailwindcss-neumorphism");
 
 module.exports = {
+	important: true,
 	content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
 	theme: {
 		screens: {
