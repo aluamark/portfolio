@@ -210,10 +210,10 @@ const Contact = () => {
 					<div className="flex justify-end">
 						{loading ? (
 							<button
-								className="flex mt-8 px-5 bg-green-500 text-sm sm:text-md font-semibold rounded shadow disabled:opacity-75"
+								className="flex justify-center items-center gap-1 w-36 mt-8 border border-green-500 bg-green-500 text-zinc-900 font-semibold px-5 py-2.5 disabled:opacity-50"
 								disabled
 							>
-								Sending...
+								Sending
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 512 512"
@@ -225,7 +225,7 @@ const Contact = () => {
 						) : (
 							<button
 								type="submit"
-								className="flex items-center gap-3 mt-8 border border-green-500 hover:bg-green-500 text-neutral-300 hover:text-zinc-900 hover:font-semibold duration-300 px-10 py-2.5"
+								className="flex justify-center items-center gap-2.5 w-36 mt-8 border border-green-500 hover:bg-green-500 text-neutral-300 hover:text-zinc-900 hover:font-semibold duration-300 px-5 py-2.5"
 							>
 								Send
 								<svg
@@ -236,7 +236,7 @@ const Contact = () => {
 									strokeWidth="2"
 									strokeLinecap="round"
 									strokeLinejoin="round"
-									className="w-5 h-5"
+									className="w-4 h-4"
 								>
 									<line x1="22" x2="11" y1="2" y2="13" />
 									<polygon points="22 2 15 22 11 13 2 9 22 2" />
