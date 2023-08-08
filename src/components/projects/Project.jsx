@@ -33,7 +33,7 @@ const Project = ({ project }) => {
 							<GitHubSVG />
 						</GradientLink>
 						<GradientLink
-							linkTo={project.github}
+							linkTo={project.site}
 							title="Live Demo"
 							target="_blank"
 							rel="noreferrer"
