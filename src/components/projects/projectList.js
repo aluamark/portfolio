@@ -22,20 +22,21 @@ import ams from "../../assets/ams.webp";
 export const projects = [
 	{
 		title: "EmployX",
-		shortDescription: "Full Stack Job Posting Web Application",
+		shortDescription: "Full Stack Job Posting Platform",
 		description:
 			"Built a full-stack Next.js job posting website using React for dynamic front-end interactivity, MongoDB for efficient database management, and Next.js server and API. Designed the user interface with Tailwind CSS for a visually appealing and responsive experience.\nImplemented secure user authentication and registration using the NextAuth framework, ensuring a seamless and personalized login process.\nKey features include job bookmarking, company-specific job browsing, personalized job recommendations based on user skills, and an intuitive admin panel for efficient company and job management.",
 		image: employx,
 		note: true,
-		noteDetails: "Some features are still in development.",
+		noteDetails:
+			"Due to the use of NextAuth, the login functionality is disabled here. For a complete site experience, please visit the live demo.",
 		links: true,
 		github: "https://github.com/aluamark/job-networking",
 		site: "https://employx.vercel.app/",
 		skills: [
-			"Next.js",
-			"React",
-			"React-Query",
+			"Next",
 			"NextAuth",
+			"React",
+			"React Query",
 			"TailwindCSS",
 			"NoSQL",
 		],
@@ -57,8 +58,8 @@ export const projects = [
 		description:
 			"Developed a full-stack social media platform using React, Redux Toolkit, Node.js, and Express.js, enabling users to authenticate, post updates, like and comment on posts, and build connections by adding friends.\nImplemented responsive and modern UI using TailwindCSS, ensuring an intuitive user experience across different devices and screen sizes.\nLeveraged NoSQL MongoDB database to efficiently store and retrieve user data, optimizing performance and scalability for a growing user base.",
 		image: sociable,
-		note: true,
-		noteDetails: "Some features are still in development.",
+		note: false,
+		noteDetails: "",
 		links: true,
 		github: "https://github.com/aluamark/sociable",
 		site: "https://sociable-phi.vercel.app/",
@@ -73,7 +74,39 @@ export const projects = [
 		],
 	},
 	{
-		title: "RFID AMS",
+		title: "BetPanda",
+		shortDescription: "Full Stack Esports Betting Platform",
+		description:
+			"Introducing a cutting-edge betting platform developed using Next.js, React, and Tailwind CSS, this dynamic website offers a seamless and immersive betting experience. Powered by React Query, it provides real-time data updates and ensures smooth interactions with the backend built on Node.js and Express, communicating with a MongoDB NoSQL database for efficient data storage and retrieval. Additionally, a scheduled cron job optimizes site performance and data integrity. This innovative betting site showcases my expertise in full-stack web development and demonstrates my ability to create modern, responsive, and data-driven applications.",
+		image: sociable,
+		note: true,
+		noteDetails:
+			"Due to the use of NextAuth, the login functionality is disabled here. For a complete site experience, please visit the live demo.",
+		links: true,
+		github: "https://github.com/aluamark/betpanda",
+		site: "https://betpanda.vercel.app/",
+		skills: [
+			"Next 13 App Directory",
+			"NextAuth",
+			"React",
+			"React Query",
+			"TailwindCSS",
+			"Node",
+			"Express",
+			"CRON",
+			"NoSQL",
+		],
+		slides: [
+			{ url: sociable },
+			{ url: sociable4 },
+			{ url: sociable5 },
+			{ url: sociable3 },
+			{ url: sociable2 },
+			{ url: sociable1 },
+		],
+	},
+	{
+		title: "RFID AMS - College Thesis",
 		shortDescription: "Full Stack Attendance Monitoring System",
 		description:
 			"Developed an innovative Attendance Monitoring System utilizing RFID technology for efficient tracking of student attendance within the school premises.\nIntegrated a secure and convenient cashless transaction feature, facilitating fee payments and purchases within the school ecosystem.\nDesigned and implemented the system's user-friendly frontend using VB .NET and ensured optimal database functionality through a backend developed with SQL.",
@@ -87,14 +120,15 @@ export const projects = [
 	},
 	{
 		title: "Panahon",
-		description: "A simple weather application.",
+		shortDescription: "A simple weather application",
+		description: "",
 		image: panahon,
 		note: false,
 		noteDetails: "",
 		links: true,
 		github: "https://github.com/aluamark/panahon",
 		site: "https://panahon.vercel.app/",
-		skills: ["NextJS", "TailwindCSS"],
+		skills: ["Next", "TailwindCSS"],
 	},
 	{
 		title: "My Portfolio",

@@ -15,9 +15,9 @@ import tailwindcss from "../../assets/skills/TailwindCSS.svg";
 import git from "../../assets/skills/Git.svg";
 import github from "../../assets/skills/Github.svg";
 import postman from "../../assets/skills/Postman.svg";
-import heroku from "../../assets/skills/Heroku.svg";
 import vercel from "../../assets/skills/Vercel.svg";
 import nextjs from "../../assets/skills/Next.svg";
+import nextauth from "../../assets/skills/NextAuth.png";
 
 export const devLangs = [
 	{
@@ -60,26 +60,31 @@ export const libraries = [
 	},
 	{
 		id: 2,
-		svg: reactquery,
-		skill: "React-Query",
+		svg: nextauth,
+		skill: "NextAuth",
 	},
 	{
 		id: 3,
+		svg: reactquery,
+		skill: "React Query",
+	},
+	{
+		id: 4,
 		svg: redux,
 		skill: "Redux",
 	},
 	{
-		id: 4,
+		id: 5,
 		svg: node,
 		skill: "Node",
 	},
 	{
-		id: 5,
+		id: 6,
 		svg: express,
 		skill: "Express",
 	},
 	{
-		id: 6,
+		id: 7,
 		svg: tailwindcss,
 		skill: "Tailwind",
 	},
@@ -118,11 +123,6 @@ export const tools = [
 	},
 	{
 		id: 6,
-		svg: heroku,
-		skill: "Heroku",
-	},
-	{
-		id: 7,
 		svg: vercel,
 		skill: "Vercel",
 	},

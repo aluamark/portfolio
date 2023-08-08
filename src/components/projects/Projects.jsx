@@ -1,17 +1,19 @@
 import React from "react";
-import Box from "../Box";
+import SectionFrame from "../SectionFrame";
+import SectionHeader from "../SectionHeader";
 import Project from "./Project";
 import { projects } from "./projectList";
 
 const Projects = () => {
 	return (
-		<Box id="projects" title="Projects" linkTo="#contact">
-			<div className="flex flex-col">
+		<SectionFrame id="projects">
+			<SectionHeader title="Projects" />
+			<div className="flex flex-col gap-10">
 				{projects.map((project) => {
 					return <Project key={project.title} project={project} />;
 				})}
 			</div>
-		</Box>
+		</SectionFrame>
 	);
 };
 

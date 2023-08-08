@@ -1,72 +1,125 @@
-import React, { useEffect, useRef, useState } from "react";
-import NavLink from "./NavLink";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import NavbarToggle from "./NavbarToggle";
+import navLinks from "./navLinks";
 
 const Navbar = () => {
-	const [navbar, setNavbar] = useState(false);
-	let menuRef = useRef();
+	const [scrolled, setScrolled] = useState(false);
+	const [activeSection, setActiveSection] = useState("");
+
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
-		const closeDropdown = (e) => {
-			if (!menuRef.current.contains(e.target)) {
-				setNavbar(false);
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
 			}
+
+			const sections = ["about", "projects", "contact"];
+			let activeSectionId = "";
+			const threshold = 0.9;
+
+			for (let i = sections.length - 1; i >= 0; i--) {
+				const sectionId = sections[i];
+				const section = document.getElementById(sectionId);
+				const rect = section.getBoundingClientRect();
+				const visibleHeight = rect.height * threshold;
+				if (
+					rect.top >= -visibleHeight &&
+					rect.bottom <= window.innerHeight + visibleHeight
+				) {
+					activeSectionId = sectionId;
+					break;
+				}
+			}
+			setActiveSection(activeSectionId);
 		};
 
-		document.addEventListener("mousedown", closeDropdown);
-
-		return () => document.removeEventListener("mousedown", closeDropdown);
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	return (
-		<nav ref={menuRef} className="lg:hidden sticky top-0 z-40">
-			<div className="absolute inset-x-0 top-0 bg-zinc-900 text-green-500 text-md hover:text-neutral-300 shadow-lg">
-				<div className="max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between md:items-center md:flex w-full">
-					<div className="flex justify-between w-full">
-						<a
-							href="#welcome"
-							className="transition ease-in-out hover:text-green-500 hover:scale-110 duration-300 font-extrabold py-5 px-5 cursor-pointer"
-						>
-							_<span className="text-neutral-300">alua</span>mark
-						</a>
-						<div
-							className="flex md:hidden items-center py-5 px-5 hover:bg-zinc-800 cursor-pointer"
-							onClick={() => setNavbar(!navbar)}
-						>
-							<button className="text-gray-700 rounded-md outline-none">
-								{navbar ? (
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										className="fill-green-500 w-6 h-6"
-										viewBox="0 0 320 512"
-									>
-										<path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-									</svg>
-								) : (
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										className="fill-green-500 w-6 h-6"
-										viewBox="0 0 448 512"
-									>
-										<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-									</svg>
+		<nav className="z-50 fixed top-0 w-full bg-gradient-to-b from-zinc-800 to-zinc-600 text-neutral-300">
+			<div
+				className={`max-w-screen-xl mx-auto flex justify-between items-center w-full h-14 px-5 transition duration-500 font-semibold ${
+					scrolled ? "shadow-xl" : ""
+				}`}
+			>
+				<a href="#welcome" className="text-white">
+					_ALUA
+				</a>
+
+				<ul className="hidden md:flex justify-end items-center gap-5">
+					{navLinks.map((link) => (
+						<li key={link.title}>
+							<a
+								href={link.linkTo}
+								className={`relative rounded-full px-3 py-1.5 text-white transition duration-300 ${
+									activeSection === link.section && scrolled
+										? "text-black"
+										: "hover:opacity-50"
+								}`}
+							>
+								{activeSection === link.section && (
+									<motion.div
+										layoutId="active-link"
+										className="bg-white absolute inset-0 rounded-full"
+										transition={{ type: "spring", duration: 0.5 }}
+									/>
 								)}
-							</button>
-						</div>
-					</div>
-					<div
-						className={`bg-neutral-700 md:bg-zinc-900 md:block ${
-							navbar ? "block" : "hidden"
-						}`}
-					>
-						<div className="md:flex justify-around divide-x divide-zinc-800/50">
-							<NavLink navbar={navbar} setNavbar={setNavbar} title="about" />
-							<NavLink navbar={navbar} setNavbar={setNavbar} title="projects" />
-							<NavLink navbar={navbar} setNavbar={setNavbar} title="contact" />
-							<NavLink navbar={navbar} setNavbar={setNavbar} title="resume" />
-						</div>
-					</div>
+								<span className="relative z-10">{link.title}</span>
+							</a>
+						</li>
+					))}
+				</ul>
+
+				<div
+					onClick={() => setIsMenuOpen(!isMenuOpen)}
+					className="md:hidden cursor-pointer"
+				>
+					<NavbarToggle isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 				</div>
 			</div>
+			<AnimatePresence>
+				{isMenuOpen && (
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+						className="md:hidden fixed w-full flex flex-col gap-1.5 p-5 bg-zinc-600 origin-top-right"
+					>
+						<ul className="flex flex-col gap-5">
+							{navLinks.map((link) => (
+								<li key={link.title}>
+									<a
+										href={link.linkTo}
+										onClick={() => setIsMenuOpen(false)}
+										className={`relative rounded-full px-3 py-1.5 text-white transition duration-300 ${
+											activeSection === link.section && scrolled
+												? "text-black"
+												: "hover:opacity-50"
+										}`}
+									>
+										{activeSection === link.section && (
+											<motion.div
+												layoutId="active-link"
+												className="bg-white absolute inset-0 rounded-full"
+												transition={{ type: "spring", duration: 0.1 }}
+											/>
+										)}
+										<span className="relative z-10">{link.title}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</nav>
 	);
 };

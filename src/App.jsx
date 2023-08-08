@@ -1,54 +1,32 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Navbar from "./components/nav/Navbar";
-import Sidebar from "./components/nav/Sidebar";
-import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
-import Resume from "./components/resume/Resume";
 import Footer from "./components/footer/Footer";
 import Welcome from "./components/welcome/Welcome";
 import ScrollToTop from "react-scroll-to-top";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-	const [run, setRun] = useState(false);
-	const welcomeRef = useRef(null);
-
-	useEffect(() => {
-		if (run) {
-			setTimeout(() => {
-				if (welcomeRef.current) {
-					welcomeRef.current.scrollIntoView({ behavior: "smooth" });
-				}
-			}, 1000);
-		}
-	}, [run]);
-
 	return (
-		<div className="font-mono select-none">
-			<Home run={run} setRun={setRun} />
-			{run && (
-				<div className="bg-zinc-900">
-					<Navbar />
-					<Sidebar>
-						<div className="flex flex-col w-full">
-							<Welcome welcomeRef={welcomeRef} />
-							<About />
-							<Projects />
-							<Contact />
-							<Resume />
-							<Footer />
-						</div>
-					</Sidebar>
-				</div>
-			)}
+		<div className="select-none bg-white font-mont antialiased">
+			<Navbar />
+			<div className="flex flex-col gap-20 w-full">
+				<Welcome />
+				<About />
+				<Projects />
+				<Contact />
+				<Footer />
+			</div>
 			<ScrollToTop
 				top={250}
 				component={
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 512 512"
-						className="p-2 bg-zinc-800 fill-neutral-300 bg-none hover:bg-green-500  hover:fill-zinc-800 hover:-translate-y-1 duration-500 rounded border-solid border-2 border-green-500"
+						className="p-2 bg-zinc-800 fill-white bg-none hover:bg-white hover:fill-zinc-900 hover:-translate-y-1 duration-500 rounded border-solid border-2 border-zinc-500 hover:border-zinc-900"
 						width="50"
 						height="50"
 					>
@@ -57,6 +35,7 @@ const App = () => {
 				}
 				className="z-50"
 			/>
+			<ToastContainer />
 		</div>
 	);
 };
