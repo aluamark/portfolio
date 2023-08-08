@@ -24,7 +24,7 @@ const About = () => {
 				/>
 			</div>
 
-			<div className="flex flex-col lg:flex-row gap-10 justify-around p-5 md:px-40 lg:px-5 overflow-hidden duration-500">
+			<div className="flex flex-col lg:flex-row gap-y-16 gap-x-5 justify-around py-10 px-5 md:px-40 lg:px-5 overflow-hidden duration-500">
 				<Category
 					title="Development Languages"
 					skills={devLangs}

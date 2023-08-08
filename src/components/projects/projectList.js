@@ -15,7 +15,6 @@ import sociable3 from "../../assets/sociable/sociable-3.png";
 import sociable4 from "../../assets/sociable/sociable-4.png";
 import sociable5 from "../../assets/sociable/sociable-5.png";
 
-import portfolio from "../../assets/portfoliosite.png";
 import panahon from "../../assets/panahon.webp";
 import ams from "../../assets/ams.webp";
 
@@ -129,16 +128,5 @@ export const projects = [
 		github: "https://github.com/aluamark/panahon",
 		site: "https://panahon.vercel.app/",
 		skills: ["Next", "TailwindCSS"],
-	},
-	{
-		title: "My Portfolio",
-		description: "A website where I can showcase my skills and projects.",
-		image: portfolio,
-		note: false,
-		noteDetails: "",
-		links: true,
-		github: "https://github.com/aluamark/portfolio",
-		site: "https://aluamark.vercel.app/",
-		skills: ["React", "TailwindCSS"],
 	},
 ];

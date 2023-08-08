@@ -30,10 +30,10 @@ const Contact = () => {
 							target="_blank"
 							rel="noreferrer"
 							aria-label="aluamark-email"
-							className="flex items-center gap-1 hover:text-green-600"
+							className="flex items-center gap-1"
 						>
 							<EmailSVG />
-							<span className="tracking-wide select-text">
+							<span className="tracking-wide select-text hover:underline">
 								aluamark@gmail.com
 							</span>
 						</a>
@@ -45,10 +45,12 @@ const Contact = () => {
 							target="_blank"
 							rel="noreferrer"
 							aria-label="aluamark-linkedIn"
-							className="flex items-center gap-1 hover:text-green-600"
+							className="flex items-center gap-1"
 						>
 							<LinkedInSVG />
-							<span className="tracking-wide select-text">LinkedIn</span>
+							<span className="tracking-wide select-text hover:underline">
+								linkedin/in/aluamark
+							</span>
 						</a>
 					</div>
 
