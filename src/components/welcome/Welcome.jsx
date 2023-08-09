@@ -39,17 +39,17 @@ const Welcome = () => {
 						</FloatingElement>
 					</div>
 					<div className="col-start-3 col-span-1">
-						<FloatingElement xPosition={-20} yPosition={-20} delay={0.3}>
+						<FloatingElement xPosition={0} yPosition={-20} delay={0.3}>
 							<ReactJsSVG />
 						</FloatingElement>
 					</div>
 					<div className="col-start-1 col-span-1 md:col-span-2">
-						<FloatingElement xPosition={20} yPosition={-20} delay={0.1}>
+						<FloatingElement xPosition={-20} yPosition={0} delay={0.1}>
 							<JavaScriptSVG />
 						</FloatingElement>
 					</div>
 					<div className="col-start-4 col-span-1 md:col-span-2">
-						<FloatingElement xPosition={-20} yPosition={0} delay={0.4}>
+						<FloatingElement xPosition={20} yPosition={0} delay={0.4}>
 							<ReduxSVG />
 						</FloatingElement>
 					</div>
@@ -76,18 +76,18 @@ const Welcome = () => {
 						</div>
 					</div>
 					<div className="col-span-1 md:col-span-2">
-						<FloatingElement xPosition={20} yPosition={0} delay={0.8}>
+						<FloatingElement xPosition={-20} yPosition={0} delay={0.8}>
 							<NodeJsSVG />
 						</FloatingElement>
 					</div>
 
 					<div className="col-start-4 col-span-1 md:col-span-2">
-						<FloatingElement xPosition={-20} yPosition={20} delay={0.5}>
+						<FloatingElement xPosition={20} yPosition={0} delay={0.5}>
 							<NextJsSVG />
 						</FloatingElement>
 					</div>
 					<div className="col-start-2 col-span-1">
-						<FloatingElement xPosition={20} yPosition={20} delay={0.7}>
+						<FloatingElement xPosition={0} yPosition={20} delay={0.7}>
 							<TailwindSVG />
 						</FloatingElement>
 					</div>
