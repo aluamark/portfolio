@@ -84,7 +84,7 @@ const ProjectDemo = ({ title, site, image }) => {
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className={`${
+							className={`hover:opacity-80 duration-300 ${
 								screen === "desktop" ? "stroke-black" : "stroke-zinc-500"
 							}`}
 						>
@@ -102,7 +102,7 @@ const ProjectDemo = ({ title, site, image }) => {
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className={`${
+							className={`hover:opacity-80 duration-300 ${
 								screen === "mobile" ? "stroke-black" : "stroke-zinc-500"
 							}`}
 						>
