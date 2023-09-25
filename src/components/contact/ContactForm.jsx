@@ -127,7 +127,7 @@ const ContactForm = () => {
 			</div>
 			<button
 				type="submit"
-				className="flex gap-1 justify-center items-center mt-5 px-5 py-3 text-white font-semibold rounded transition-all duration-500 bg-gradient-to-tl from-zinc-900 via-neutral-500 to-zinc-700 bg-size-200 bg-pos-0 hover:bg-pos-100 disabled:from-zinc-900 disabled:to-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed"
+				className="flex gap-1 justify-center items-center mt-5 px-5 py-3 text-white text-sm font-semibold rounded transition-all duration-500 bg-gradient-to-tl from-zinc-900 via-neutral-500 to-zinc-700 bg-size-200 bg-pos-0 hover:bg-pos-100 disabled:from-zinc-900 disabled:to-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed"
 				disabled={loading}
 			>
 				{loading ? (

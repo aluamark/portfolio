@@ -12,7 +12,7 @@ const About = () => {
 
 			<div className="relative flex justify-center w-full overflow-hidden">
 				<div className="absolute top-0 left-1/2 -translate-x-1/2">
-					<h1 className="text-5xl md:text-7xl lg:text-9xl text-neutral-100 font-extrabold tracking-widest duration-1000">
+					<h1 className="text-4xl md:text-7xl lg:text-9xl text-neutral-100 font-extrabold tracking-widest duration-1000">
 						TECHNOLOGIES
 					</h1>
 				</div>

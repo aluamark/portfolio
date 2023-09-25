@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<div className="select-none bg-white font-mont antialiased">
 			<Navbar />
-			<div className="flex flex-col gap-20 w-full">
+			<div className="flex flex-col w-full">
 				<Welcome />
 				<About />
 				<Projects />
