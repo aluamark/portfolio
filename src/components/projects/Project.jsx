@@ -18,7 +18,7 @@ const Project = ({ project }) => {
 				</span>
 				<span className="font-semibold">{project.shortDescription}</span>
 			</div>
-			<div className="flex justify-between px-1 md:px-5 text-sm">
+			<div className="flex justify-between px-5 text-sm">
 				{project.login && (
 					<div className="flex flex-col select-text">
 						<span className="font-semibold">Demo account</span>
@@ -37,7 +37,7 @@ const Project = ({ project }) => {
 							onClick={() => setWarningClicked(!warningClicked)}
 							className="flex flex-col items-center font-semibold"
 						>
-							Login Warning
+							Login Advisory
 							<AlertSVG className="w-10 h-10 stroke-red-500 animate-pulse" />
 						</button>
 

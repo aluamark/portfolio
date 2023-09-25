@@ -19,15 +19,15 @@ const Welcome = () => {
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
 			id="welcome"
-			className="relative md:min-h-screen md:h-screen max-w-screen-xl mx-auto w-full flex justify-center items-center pt-20 px-5"
+			className="relative md:min-h-screen md:h-screen mx-auto w-full flex justify-center items-center pt-20 px-5"
 		>
-			<div className="absolute inset-x-0 top-5 py-20 md:py-40 lg:py-0 overflow-hidden">
-				<h1 className="text-6xl lg:text-[300px] text-neutral-100 font-extrabold duration-1000">
+			<div className="absolute inset-x-0 top-5 left-5 py-20 md:py-40 lg:py-10 xl:py-0 overflow-hidden">
+				<h1 className="text-6xl md:text-9xl lg:text-[200px] xl:text-[300px] text-neutral-100 font-extrabold duration-1000">
 					PORTFOLIO
 				</h1>
 			</div>
-			<div className="absolute inset-x-0 bottom-0 py-20 md:py-40 lg:py-0 overflow-hidden">
-				<h1 className="text-6xl lg:text-[300px] text-neutral-100 font-extrabold transform scale-x-[-1] duration-1000">
+			<div className="absolute inset-x-0 bottom-0 right-5 py-20 md:py-40 lg:py-10 xl:py-0 overflow-hidden">
+				<h1 className="text-6xl md:text-9xl lg:text-[200px] xl:text-[300px] text-neutral-100 font-extrabold transform scale-x-[-1] duration-1000">
 					PORTFOLIO
 				</h1>
 			</div>
