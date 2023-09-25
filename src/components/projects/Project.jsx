@@ -18,9 +18,9 @@ const Project = ({ project }) => {
 				</span>
 				<span className="font-semibold">{project.shortDescription}</span>
 			</div>
-			<div className="flex justify-between px-5 text-sm overflow-hidden">
+			<div className="flex justify-between px-1 md:px-5 text-sm">
 				{project.login && (
-					<div className="flex flex-col select-text" data-aos="fade-right">
+					<div className="flex flex-col select-text">
 						<span className="font-semibold">Demo account</span>
 						<div>
 							<span className="font-semibold">Email:</span> {project.email}
@@ -32,7 +32,7 @@ const Project = ({ project }) => {
 					</div>
 				)}
 				{project.note && (
-					<div className="relative" data-aos="fade-left">
+					<div className="relative">
 						<button
 							onClick={() => setWarningClicked(!warningClicked)}
 							className="flex flex-col items-center font-semibold"
