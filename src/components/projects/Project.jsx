@@ -20,7 +20,7 @@ const Project = ({ project }) => {
 			</div>
 			<div className="flex justify-between px-5 text-sm">
 				{project.login && (
-					<div className="flex flex-col select-text">
+					<div className="flex flex-col select-text" data-aos="fade-right">
 						<span className="font-semibold">Demo account</span>
 						<div>
 							<span className="font-semibold">Email:</span> {project.email}
@@ -32,10 +32,11 @@ const Project = ({ project }) => {
 					</div>
 				)}
 				{project.note && (
-					<div className="relative">
+					<div className="relative overflow-hidden">
 						<button
 							onClick={() => setWarningClicked(!warningClicked)}
 							className="flex flex-col items-center font-semibold"
+							data-aos="fade-left"
 						>
 							Login Advisory
 							<AlertSVG className="w-10 h-10 stroke-red-500 animate-pulse" />
