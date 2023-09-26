@@ -46,12 +46,12 @@ const Navbar = () => {
 	return (
 		<nav className="z-50 fixed top-0 w-full bg-gradient-to-b from-zinc-800 to-zinc-600 text-neutral-300">
 			<div
-				className={`max-w-screen-xl mx-auto flex justify-between items-center w-full h-14 px-5 transition duration-500 font-semibold ${
+				className={`max-w-screen-xl mx-auto flex justify-between items-center w-full h-14 px-5 md:px-10 transition duration-500 font-semibold ${
 					scrolled ? "shadow-xl" : ""
 				}`}
 			>
-				<a href="#welcome" className="text-white">
-					_ALUA
+				<a href="#welcome" className="text-white px-3 py-1.5 border-2 rounded hover:bg-white hover:text-black duration-300 hover:border-white">
+					ALUA
 				</a>
 
 				<ul className="hidden md:flex justify-end items-center gap-5">

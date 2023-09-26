@@ -21,7 +21,7 @@ import ams from "../../assets/ams.webp";
 export const projects = [
 	{
 		title: "EmployX",
-		shortDescription: "Full Stack Job Posting Platform",
+		shortDescription: "Job Posting Platform",
 		description:
 			"Built a full-stack Next.js job posting website using React for dynamic front-end interactivity, MongoDB for efficient database management, and Next.js server and API. Designed the user interface with Tailwind CSS for a visually appealing and responsive experience.\nImplemented secure user authentication and registration using the NextAuth framework, ensuring a seamless and personalized login process.\nKey features include job bookmarking, company-specific job browsing, personalized job recommendations based on user skills, and an intuitive admin panel for efficient company and job management.",
 		image: employx,
@@ -56,7 +56,7 @@ export const projects = [
 	},
 	{
 		title: "Sociable",
-		shortDescription: "Full Stack Social Media Platform",
+		shortDescription: "Social Media Platform",
 		description:
 			"Developed a full-stack social media platform using React, Redux Toolkit, Node.js, and Express.js, enabling users to authenticate, post updates, like and comment on posts, and build connections by adding friends.\nImplemented responsive and modern UI using TailwindCSS, ensuring an intuitive user experience across different devices and screen sizes.\nLeveraged NoSQL MongoDB database to efficiently store and retrieve user data, optimizing performance and scalability for a growing user base.",
 		image: sociable,
@@ -80,7 +80,7 @@ export const projects = [
 	},
 	{
 		title: "BetPanda",
-		shortDescription: "Full Stack Esports Betting Platform",
+		shortDescription: "Esports Betting Platform",
 		description:
 			"Introducing a cutting-edge betting platform developed using Next.js, React, and Tailwind CSS, this dynamic website offers a seamless and immersive betting experience. Powered by React Query, it provides real-time data updates and ensures smooth interactions with the backend built on Node.js and Express, communicating with a MongoDB NoSQL database for efficient data storage and retrieval. Additionally, a scheduled cron job optimizes site performance and data integrity. This innovative betting site showcases my expertise in full-stack web development and demonstrates my ability to create modern, responsive, and data-driven applications.",
 		image: sociable,
@@ -115,7 +115,7 @@ export const projects = [
 	},
 	{
 		title: "RFID AMS - College Thesis",
-		shortDescription: "Full Stack Attendance Monitoring System",
+		shortDescription: "Attendance Monitoring System",
 		description:
 			"Developed an innovative Attendance Monitoring System utilizing RFID technology for efficient tracking of student attendance within the school premises.\nIntegrated a secure and convenient cashless transaction feature, facilitating fee payments and purchases within the school ecosystem.\nDesigned and implemented the system's user-friendly frontend using VB .NET and ensured optimal database functionality through a backend developed with SQL.",
 		image: ams,

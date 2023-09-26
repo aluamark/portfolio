@@ -64,7 +64,7 @@ const ContactForm = () => {
 			onSubmit={handleSubmit(sendEmail)}
 			className="nm-flat-neutral-50-lg border flex flex-col gap-3 p-5 w-full rounded-lg"
 		>
-			<h2 className="text-xl font-bold">Or send me an emai!</h2>
+			<h2 className="text-xl font-bold">Send me a message</h2>
 			<div className="flex flex-col gap-5">
 				<div className="flex flex-col md:flex-row gap-5 justify-between">
 					<div className="relative space-y-1 w-full">
@@ -73,6 +73,7 @@ const ContactForm = () => {
 							{...register("user_name", { required: true })}
 							name="user_name"
 							type="text"
+							placeholder="Ex. John Doe"
 							className="text-black p-2.5 w-full focus:outline-none bg-neutral-100 border rounded"
 							autoComplete="off"
 							autoCapitalize="words"
@@ -93,6 +94,7 @@ const ContactForm = () => {
 							})}
 							name="user_email"
 							type="email"
+							placeholder="Ex. johndoe@email.com"
 							className="text-black p-2.5 w-full focus:outline-none bg-neutral-100 border rounded"
 							autoComplete="off"
 						/>
@@ -114,6 +116,7 @@ const ContactForm = () => {
 						{...register("message", { required: true })}
 						name="message"
 						rows="3"
+						placeholder="Ex. When are you free for an interview?"
 						className="text-black p-2.5 w-full focus:outline-none bg-neutral-100 border rounded"
 						autoComplete="off"
 						autoCapitalize="sentences"

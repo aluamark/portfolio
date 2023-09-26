@@ -8,17 +8,19 @@ import AlertSVG from "../svg/AlertSVG";
 
 const Project = ({ project }) => {
 	const [warningClicked, setWarningClicked] = useState(false);
-	console.log(warningClicked);
 
 	return (
 		<div className="flex-none flex flex-col gap-5 text-left w-full">
-			<div className="flex flex-col gap-2.5 px-5" data-aos="fade-right">
+			<div
+				className="flex flex-col gap-2.5 px-5 md:px-10"
+				data-aos="fade-right"
+			>
 				<span className="text-xl font-bold underline underline-offset-8">
 					{project.title}
 				</span>
 				<span className="font-semibold">{project.shortDescription}</span>
 			</div>
-			<div className="flex justify-between px-5 text-sm">
+			<div className="flex justify-between px-5 md:px-10 text-sm">
 				{project.login && (
 					<div className="flex flex-col select-text" data-aos="fade-right">
 						<span className="font-semibold">Demo account</span>
@@ -32,15 +34,17 @@ const Project = ({ project }) => {
 					</div>
 				)}
 				{project.note && (
-					<div className="relative overflow-hidden">
-						<button
-							onClick={() => setWarningClicked(!warningClicked)}
-							className="flex flex-col items-center font-semibold"
-							data-aos="fade-left"
-						>
-							Login Advisory
-							<AlertSVG className="w-10 h-10 stroke-red-500 animate-pulse" />
-						</button>
+					<div className="relative">
+						<div className="overflow-hidden">
+							<button
+								onClick={() => setWarningClicked(!warningClicked)}
+								className="flex flex-col items-center font-semibold"
+								data-aos="fade-left"
+							>
+								Login Advisory
+								<AlertSVG className="w-10 h-10 stroke-red-500" />
+							</button>
+						</div>
 
 						<AnimatePresence>
 							{warningClicked && (
@@ -73,7 +77,7 @@ const Project = ({ project }) => {
 				image={project.image}
 			/>
 			{project.links && (
-				<div className="flex flex-col gap-5 px-5">
+				<div className="flex flex-col gap-5 px-5 md:px-10">
 					<div className="flex gap-1">
 						<GradientLink
 							linkTo={project.github}
@@ -95,7 +99,7 @@ const Project = ({ project }) => {
 				</div>
 			)}
 
-			<div className="flex flex-wrap gap-1 px-5">
+			<div className="flex flex-wrap gap-1 px-5 md:px-10">
 				{project.skills.map((skill) => {
 					return (
 						<span

@@ -13,48 +13,44 @@ const Contact = () => {
 		<SectionFrame id="contact">
 			<SectionHeader title="Contact" />
 
-			<div className="flex flex-col md:flex-row gap-10 px-5" data-aos="fade-up">
-				<div className="flex flex-col justify-center items-center gap-3 w-full text-center md:text-start">
+			<div className="flex flex-col lg:flex-row gap-10 px-5" data-aos="fade-up">
+				<div className="flex flex-col justify-center items-center gap-3 w-full text-center">
 					<p className="text-xl font-bold">
 						Interested in hiring me? Let's connect!
 					</p>
 
-					<div className="flex justify-center md:justify-start items-center gap-1">
+					<div className="flex items-center gap-1">
 						<PhoneSVG />
 						<span className="tracking-wide select-text">(+63)936-341-1848</span>
 					</div>
 
-					<div className="flex justify-center md:justify-start">
-						<a
-							href="mailto:aluamark@gmail.com"
-							target="_blank"
-							rel="noreferrer"
-							aria-label="aluamark-email"
-							className="flex items-center gap-1"
-						>
-							<EmailSVG />
-							<span className="tracking-wide select-text hover:underline">
-								aluamark@gmail.com
-							</span>
-						</a>
-					</div>
+					<a
+						href="mailto:aluamark@gmail.com"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="aluamark-email"
+						className="flex items-center gap-1"
+					>
+						<EmailSVG />
+						<span className="tracking-wide select-text hover:underline">
+							aluamark@gmail.com
+						</span>
+					</a>
 
-					<div className="flex justify-center md:justify-start">
-						<a
-							href="https://www.linkedin.com/in/aluamark/"
-							target="_blank"
-							rel="noreferrer"
-							aria-label="aluamark-linkedIn"
-							className="flex items-center gap-1"
-						>
-							<LinkedInSVG />
-							<span className="tracking-wide select-text hover:underline">
-								linkedin/in/aluamark
-							</span>
-						</a>
-					</div>
+					<a
+						href="https://www.linkedin.com/in/aluamark/"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="aluamark-linkedIn"
+						className="flex items-center gap-1"
+					>
+						<LinkedInSVG />
+						<span className="tracking-wide select-text hover:underline">
+							linkedin/in/aluamark
+						</span>
+					</a>
 
-					<div className="flex flex-col gap-3 items-center pt-5">
+					<div className="flex flex-col gap-3 items-center">
 						<p>You can also view / download my resume here</p>
 						<ChevronDownSVG className="animate-bounce" />
 						<GradientLink
